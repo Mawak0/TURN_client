@@ -31,7 +31,7 @@ touch "$BASHRC"
 awk -v a="$A" -v b="$B" '$0==a{skip=1;next}$0==b{skip=0;next}!skip{print}' "$BASHRC" > "$BASHRC.tmp"
 printf '\n%s\n[ -t 1 ] && [ -z "$GEF_WL_PROXY_STARTED" ] && export GEF_WL_PROXY_STARTED=1 && exec "$HOME/GEF_WL_PROXY/start.sh"\n%s\n' "$A" "$B" >> "$BASHRC.tmp"
 mv "$BASHRC.tmp" "$BASHRC"
-
+source ~/.bashrc
 echo
 echo "Установка завершена."
 echo "Перезапустите Termux или выполните: source ~/.bashrc"
