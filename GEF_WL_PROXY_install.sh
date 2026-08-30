@@ -2,14 +2,14 @@
 set -e
 APP="$HOME/GEF_WL_PROXY"
 BIN="$APP/client"
-URL="https://github.com/cacggghp/vk-turn-proxy/releases/latest/download/client-android-arm64"
+URL="https://github.com/MYSOREZ/vk-turn-proxy/releases/download/v1.5.3/client-android-arm64"
 
 echo "=== GEF_WL_PROXY ==="
 mkdir -p "$APP"; chmod 700 "$APP"
 pkg update -y
+pkg upgrade -y
 pkg install -y python curl
-python -m pip install --upgrade pip
-python -m pip install textual
+python -m pip install textual --no-build-isolation
 
 echo "Скачивание client-android-arm64..."
 curl -fL --retry 3 "$URL" -o "$BIN"
