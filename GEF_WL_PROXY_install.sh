@@ -34,5 +34,4 @@ mv "$BASHRC.tmp" "$BASHRC"
 source ~/.bashrc
 echo
 echo "Установка завершена."
-echo "Перезапустите Termux или выполните: source ~/.bashrc"
 echo "При первом запуске GEF_WL_PROXY попросит Base64-конфигурацию."
